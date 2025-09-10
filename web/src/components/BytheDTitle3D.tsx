@@ -23,17 +23,23 @@ function Text3D({ url, children, ...props }: any) {
 }
 
 export default function BytheDTitle3D() {
+  // Responsivo: altura y tamaño del texto según el ancho de pantalla
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const canvasHeight = isMobile ? '28vh' : '40vh';
+  const textSize = isMobile ? 1.7 : 3;
+  const textHeight = isMobile ? 0.3 : 0.5;
+
   return (
-    <div style={{ width: '100vw', height: '40vh' }}>
+    <div className="w-screen" style={{ height: canvasHeight }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
         <Suspense>
           <Text3D
-            url="public/Arvo-Regular.ttf"
-            height={0.5}
+            url="/Arvo-Regular.ttf"
+            height={textHeight}
             curveSegments={32}
             bevelEnabled
             bevelSegments={12}
-            size={3}
+            size={textSize}
           >
             BYTHE D
           </Text3D>
