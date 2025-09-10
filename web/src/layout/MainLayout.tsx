@@ -1,4 +1,6 @@
+
 import type { ReactNode } from 'react';
+import BytheDTitle3D from '../components/BytheDTitle3D';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -15,8 +17,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
         }}
       />
-      {/* Content */}
+      {/* Título */}
       <div className="relative z-10">
+        <BytheDTitle3D />
         {children}
       </div>
     </div>
