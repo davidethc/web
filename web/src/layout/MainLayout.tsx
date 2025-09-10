@@ -1,6 +1,7 @@
 
 import type { ReactNode } from 'react';
 import BytheDTitle3D from '../components/BytheDTitle3D';
+import NavBar from './NavBar';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       />
       {/* Título */}
       <div className="relative z-10">
+        <NavBar />
         <BytheDTitle3D />
         {children}
       </div>

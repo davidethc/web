@@ -28,7 +28,7 @@ export default function BytheDTitle3D() {
       <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
         <Suspense>
           <Text3D
-            url="https://api.fontsource.org/v1/fonts/lora/latin-700-normal.ttf"
+            url="public/Arvo-Regular.ttf"
             height={0.5}
             curveSegments={32}
             bevelEnabled
