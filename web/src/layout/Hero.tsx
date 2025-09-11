@@ -7,7 +7,7 @@ import FlechaAnimada from "./FlechaAnimada";
 
 const GradientHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-0">
+  <section className="relative flex items-center justify-center overflow-hidden px-6 pt-0 mt-10">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
@@ -18,7 +18,7 @@ const GradientHero = () => {
         <div className="space-y-6">
           {/* Flecha animada en la mitad superior, justo encima del bloque de texto principal */}
           <div className="flex justify-center mb-2">
-            <FlechaAnimada />
+         
           </div>
           <div className="inline-block">
             <div className="relative px-3 py-1 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 mt-12">
