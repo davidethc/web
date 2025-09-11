@@ -1,8 +1,6 @@
-import React from "react";
-import { Button } from "../components/components/nurui/button";
-import { ArrowRight, Github, Link, Linkedin, Mail } from "lucide-react";
+
 import { GradientGridHero } from "../components/components/nurui/gradient-grid-hero";
-import FlechaAnimada from "./FlechaAnimada";
+
 
 
 const GradientHero = () => {
