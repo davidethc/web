@@ -25,13 +25,12 @@ function Text3D({ url, children, ...props }: any) {
 export default function BytheDTitle3D() {
   // Responsivo: altura y tamaño del texto según el ancho de pantalla
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-  const canvasHeight = isMobile ? '28vh' : '40vh';
-  const textSize = isMobile ? 1.7 : 3;
-  const textHeight = isMobile ? 0.3 : 0.5;
+  const textSize = isMobile ? 2.2 : 5.5;
+  const textHeight = isMobile ? 0.7 : 1;
 
   return (
-    <div className="w-screen" style={{ height: canvasHeight }}>
-      <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
+    <div className="w-screen flex items-start justify-center mt-6" style={{ minHeight: 0, marginBottom: 0 }}>
+      <Canvas style={{ height: 'auto', width: '100%', minHeight: 0 }} camera={{ position: [0, 0, 10], fov: 60 }}>
         <Suspense>
           <Text3D
             url="/Arvo-Regular.ttf"
