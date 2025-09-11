@@ -25,7 +25,7 @@ function Text3D({ url, children, ...props }: any) {
 export default function BytheDTitle3D() {
   // Responsivo: altura y tamaño del texto según el ancho de pantalla
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-  const textSize = isMobile ? 2.2 : 5.5;
+  const textSize = isMobile ? 2.2 : 8.5;
   const textHeight = isMobile ? 0.7 : 1;
 
   return (

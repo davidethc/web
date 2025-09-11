@@ -40,67 +40,9 @@ const GradientHero = () => {
             Landing pages optimizadas, campañas publicitarias con seguimiento y software
             a medida que integra tus ventas, pagos y atención. Menos fricción, más conversiones.
           </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Button className="relative overflow-hidden group bg-gradient-to-r from-purple-500 to-pink-500 border-0">
-              <span className="relative z-10 flex items-center">
-                Solicitar demo{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-            </Button>
-            <Button
-              variant="outline"
-              className="border-zinc-700 text-pink-500 hover:text-pink-700 hover:border-zinc-500"
-            >
-              Consultar portafolio
-            </Button>
-          </div>
-          <div className="flex gap-4 pt-4">
-            <a
-              href="https://github.com/afsar-dev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <div>
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </div>
-              </Button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/md-afsar-mahmud"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <div>
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </div>
-              </Button>
-            </a>
-            <a href="mailto:mdafsar.dev@gmail.com">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <div>
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </div>
-              </Button>
-            </a>
-          </div>
+          
+          
+       
         </div>
         <div className="flex justify-center">
           <GradientGridHero />
