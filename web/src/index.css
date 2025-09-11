@@ -1,6 +1,7 @@
 
 @import "tailwindcss";
 @import "./background.css";
+@import "./styles/animations.css";
 
 .crosshatch-bg {
 	position: relative;

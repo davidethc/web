@@ -1,6 +1,6 @@
 
 import { GradientGridHero } from "../components/components/nurui/gradient-grid-hero";
-
+import GradientText from "../components/components/nurui/gradient-text";
 
 
 const GradientHero = () => {
@@ -27,14 +27,19 @@ const GradientHero = () => {
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            <GradientText
+              colors={["#9333ea", "#db2777", "#9333ea", "#db2777", "#9333ea"]}
+              animationSpeed={8}
+              showBorder={false}
+              className="text-7xl font-bold"
+            >
               Estrategia, diseño y automatización
-            </span>
+            </GradientText>
             <span className="block text-3xl md:text-4xl mt-2">
-              todo funcionando para vender.
+              Todo funcionando para vender.
             </span>
           </h1>
-          <p className="text-xl text-zinc-400 max-w-[600px]">
+          <p className="text-xl font-normal text-gray-700 max-w-[600px] leading-relaxed">
             Landing pages optimizadas, campañas publicitarias con seguimiento y software
             a medida que integra tus ventas, pagos y atención. Menos fricción, más conversiones.
           </p>
