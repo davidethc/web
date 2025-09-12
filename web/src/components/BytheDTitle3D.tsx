@@ -56,8 +56,8 @@ export default function BytheDTitle3D() {
   const textHeight = isMobile ? 0.7 : 1;
 
   return (
-    <div className="w-screen flex items-center justify-center" style={{ minHeight: '40vh', margin: 0 }}>
-      <Canvas style={{ height: '40vh', width: '100%' }} camera={{ position: [0, 0, 15], fov: 50 }}>
+    <div className="w-screen flex items-center justify-center" style={{ minHeight: isMobile ? '40vh' : '40vh', margin: 0 }}>
+      <Canvas style={{ height: isMobile ? '50vh' : '40vh', width: '100%' }} camera={{ position: [0, 0, 15], fov: isMobile ? 65 : 50 }}>
         <Suspense>
           <Text3D
             url="/Arvo-Regular.ttf"

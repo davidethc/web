@@ -23,11 +23,11 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         <div className="relative z-10">
           <div className="w-screen flex flex-col items-start justify-center">
             <NavBar />
-            <div className="w-full flex justify-center mt-12">
+            <div className="w-full flex justify-center mt-8 md:mt-16">
               <BytheDTitle3D />
             </div>
           </div>
-          <div className="-mt-20">
+          <div className="-mt-12 md:-mt-20">
             <GradientHero />
           </div>
           {children}
@@ -36,5 +36,3 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     </>
   );
 }
-
-      
