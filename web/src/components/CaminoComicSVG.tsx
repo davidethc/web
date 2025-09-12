@@ -1,4 +1,3 @@
-import React from "react";
 
 const CaminoComicSVG = () => (
   <svg width="480" height="220" viewBox="0 0 480 220">

@@ -14,10 +14,37 @@ function Text3D({ url, children, ...props }: any) {
 
   return (
     <Center>
-      <Text3DBase font={font} {...props}>
-        {children}
-        <meshStandardMaterial color="#00eaff" roughness={0.4} />
-      </Text3DBase>
+      <group>
+        {/* Capa principal del texto */}
+        <Text3DBase font={font} {...props}>
+          {children}
+          <meshPhysicalMaterial
+            color="#00eaff"
+            metalness={0.8}
+            roughness={0.2}
+            clearcoat={1}
+            clearcoatRoughness={0.1}
+            emissive="#00eaff"
+            emissiveIntensity={0.5}
+            toneMapped={false}
+          />
+        </Text3DBase>
+
+        {/* Capa de brillo (glow) */}
+        <Text3DBase 
+          font={font} 
+          {...props}
+          position={[0, 0, -0.1]}
+        >
+          {children}
+          <meshBasicMaterial
+            color="#00eaff"
+            transparent
+            opacity={0.3}
+            toneMapped={false}
+          />
+        </Text3DBase>
+      </group>
     </Center>
   );
 }
@@ -29,8 +56,8 @@ export default function BytheDTitle3D() {
   const textHeight = isMobile ? 0.7 : 1;
 
   return (
-    <div className="w-screen flex items-start justify-center mt-6" style={{ minHeight: 0, marginBottom: 0 }}>
-      <Canvas style={{ height: 'auto', width: '100%', minHeight: 0 }} camera={{ position: [0, 0, 10], fov: 60 }}>
+    <div className="w-screen flex items-center justify-center" style={{ minHeight: '40vh', margin: 0 }}>
+      <Canvas style={{ height: '40vh', width: '100%' }} camera={{ position: [0, 0, 15], fov: 50 }}>
         <Suspense>
           <Text3D
             url="/Arvo-Regular.ttf"
@@ -45,7 +72,14 @@ export default function BytheDTitle3D() {
         </Suspense>
         <pointLight position={[0, 5, 10]} intensity={1} />
         <ambientLight intensity={0.3} />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls 
+          enableZoom={false}
+          enableRotate={true}
+          minPolarAngle={Math.PI / 2} // Bloquea rotación vertical (arriba/abajo)
+          maxPolarAngle={Math.PI / 2} // Bloquea rotación vertical (arriba/abajo)
+          enablePan={false} // Deshabilita el paneo
+          rotateSpeed={0.5} // Reduce la velocidad de rotación
+        />
       </Canvas>
     </div>
   );
