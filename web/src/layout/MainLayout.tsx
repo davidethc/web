@@ -18,16 +18,15 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         SHADING={true}
         TRANSPARENT={true}
       />
-      <div className="crosshatch-bg">
-        {/* Your Content/Components */}
-        <div className="relative z-10">
+      <div className="fixed inset-0 overflow-hidden crosshatch-bg">
+        <div className="relative min-h-screen">
           <div className="w-screen flex flex-col items-start justify-center">
             <NavBar />
-            <div className="w-full flex justify-center mt-8 md:mt-16">
+            <div className="w-full flex justify-center mt-0 md:mt-8">
               <BytheDTitle3D />
             </div>
           </div>
-          <div className="-mt-12 md:-mt-20">
+          <div className="-mt-8 md:-mt-16">
             <GradientHero />
           </div>
           {children}

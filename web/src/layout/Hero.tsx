@@ -40,7 +40,7 @@ const GradientHero = () => {
             a medida que integra tus ventas, pagos y atención. Menos fricción, más conversiones.
           </p>
         </div>
-        <div className="flex justify-center w-full max-w-[95vw] lg:max-w-full mx-auto -mt-2 lg:mt-0">
+        <div className="flex justify-center w-full max-w-[95vw] lg:max-w-full mx-auto -mt-2 lg:mt-2">
           <GradientGridHero />
         </div>
       </div>

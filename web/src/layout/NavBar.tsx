@@ -9,7 +9,7 @@ const navItems = [
 
 export default function NavBar() {
 	return (
-		<nav className="w-full flex justify-center items-center py-4 absolute top-0 left-0 z-20 bg-transparent">
+		<nav className="w-full flex justify-center items-center py-2 absolute top-0 left-0 z-20 bg-transparent">
 			{navItems.map((item) => (
 				<React.Fragment key={item.label}>
 					<a
